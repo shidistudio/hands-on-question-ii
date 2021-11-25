@@ -17,6 +17,9 @@
                                     <p class="mt-1 text-sm text-gray-600">
                                         Falcon offers an API service to integrate an accurate image content moderator into your applications and websites With the Falcon function, you can identify certain scenes in images that are specific to your business needs. for more detail please click <a class="text-indigo-600 hover:text-indigo-900" href="https://www.hexosys.com/falcon">here</a>
                                     </p>
+                                    <pre v-if="result">
+                                      @{{ result }}  
+                                    </pre>
                                 </div>
                             </div>
                             <div class="mt-5 md:mt-0 md:col-span-2">
@@ -51,7 +54,9 @@
                                         <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                                             <div>
                                                 <div
-                                                    class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                                    class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md upload-area"
+                                                    @dragover.prevent="dragover" @dragleave.prevent="dragleave" @drop.prevent="drop"
+                                                    >
                                                     <div class="space-y-1 text-center">
                                                         <svg class="mx-auto h-12 w-12 text-gray-400"
                                                              stroke="currentColor" fill="none" viewBox="0 0 48 48"
@@ -65,7 +70,7 @@
                                                             <label for="file-upload"
                                                                    class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
                                                                 <span>Upload a file</span>
-                                                                <input id="file-upload" name="file-upload" type="file"
+                                                                <input id="file-upload" ref="file" name="file-upload" type="file"
                                                                        class="sr-only" @change="processFileChange($event.target.name, $event.target.files[0]);">
                                                             </label>
                                                             <p class="pl-1">or drag and drop</p>

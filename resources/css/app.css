@@ -1,3 +1,21 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+.drag-on-hover{
+	background: #e0f5e0;
+	cursor: pointer;
+}
+
+.drag-end-hover{
+	background: red;
+}
+
+pre {
+    white-space: pre-wrap;
+    background: hsl(230deg 51% 5%);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 5px;
+    color: white;
+}
