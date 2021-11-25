@@ -13,10 +13,10 @@
                         <div class="md:grid md:grid-cols-3 md:gap-6">
                             <div class="md:col-span-1">
                                 <div class="px-4 sm:px-0">
-                                    <h3 class="text-lg font-medium leading-6 text-gray-900">FALCON API (V1.0)</h3>
-                                    <p class="mt-1 text-sm text-gray-600">
+                                    <h3 class="text-lg font-medium leading-6 text-gray-900">Result</h3>
+                              <!--       <p class="mt-1 text-sm text-gray-600">
                                         Falcon offers an API service to integrate an accurate image content moderator into your applications and websites With the Falcon function, you can identify certain scenes in images that are specific to your business needs. for more detail please click <a class="text-indigo-600 hover:text-indigo-900" href="https://www.hexosys.com/falcon">here</a>
-                                    </p>
+                                    </p> -->
                                     <pre v-if="result">
                                       @{{ result }}  
                                     </pre>
